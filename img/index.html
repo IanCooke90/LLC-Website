@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#prev-work">Work</a></li>
+          <li><a href="#about-me">About</a></li>
+          <li><a href="#services">services</a></li>
+          <li><a href="#contact-me">Hire Me</a></li>
+        </ul>
+      </nav>
+      <div class="menu-toggle">
+        <div class="hamburger">
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="hero-image">
+      </div>
+      <section class="services-container">
+        <h2>My Services</h2>
+        <div class= "design">
+        <i class="fas fa-pencil-alt fa-4x"></i>
+          <h3>design</h3>
+        <p>Your site represents your business or personal brand and will often be a customers first impression. I design websites that make that first impression a great one!
+        To create a truely engaging site i work with you to design a site you'll be proud of!  </p>
+          </div>
+        <div class="develop">
+        <i class="fa fa-cogs fa-3x"></i>
+        <h3>Develop</h3>
+        <p>The way we browse is changing. To keep up with these habbits the websites i design and develop with a mobile first approach. Using the latest technologies to create a wonderful experince on any device.
+        </p>
+      </div>
+      <div class="communicate">
+        <i class="fas fa-comments fa-4x"></i>
+        <h3>communication</h3>
+          <p>Trust is the key component to creating a great website.I belive you should be able to contact me  freely before we lanch your new site. There is no such thing as a stupid question!</p>
+      </div>
+      </section>
+      <section class="mywork-container">
+        <h2>My Work</h2>
+        <img src="img/AppleMockUp.png" alt="3 different apple products shbowing the website of Large Letter Company">
+        <h4>Large Letter Company</h4>
+        <p> This will be a sort blurb about the company</p>
+        <a href="#" class="button">Find out more</a>
+
+        <img src="img/AppleMockUp.png" alt="3 different apple products shbowing the website of Large Letter Company">
+        <h4>Large Letter Company</h4>
+        <p> This will be a sort blurb about the company</p>
+        <a href="#" class="button">Find out more</a>
+
+      </section>
+    </main>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script>
+    $('.menu-toggle').click(function() {
+      $('.site-nav').toggleClass('site-nav--open', 500);
+      $(this).toggleClass('open');
+    });
+  </script>
+</body>
+</html>

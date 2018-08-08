@@ -1,0 +1,509 @@
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+
+@import url(https://fonts.googleapis.com/css?family=Pompiere);
+
+html {
+  background-color: #fff;
+  font-size: 1em;
+  line-height: 1.1;
+  color: #333;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio, canvas, iframe, img, svg, video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+h1, h2, h3, h4 {
+font-family: 'Pompiere', cursive;
+  padding bottom:0;
+  margin-bottom:0;
+}
+
+
+h2 {
+  font-size: 1.5rem;
+
+}
+h3{
+  font-size: 1.4rem;
+
+}
+
+p {
+font-family: 'Pompiere', cursive;
+  margin: 0 15px;
+  font-size:1.3rem;
+}
+
+a {
+  color:#fff;
+  font-family: 'Pompiere', cursive;
+}
+
+/* ==========================================================================
+  page layout/ custom styles.
+   ========================================================================== */
+
+/* containers*/
+.wrapper{
+  width:100vw;
+}
+
+.contact,.advantage-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-container{
+  display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom:5vh;
+
+}
+
+
+
+/* ===========================================================================
+*  Main site navigation styling - hamburger menu for mobile.
+==============================================================================*/
+
+header {
+  padding: 1em;
+  position: fixed;
+  width: 100%;
+  background-color:#1D8880;
+
+}
+
+.site-nav {
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  background: #262d2e;
+  height: 0px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.site-nav--open {
+  height: auto;
+  border: 1px solid;
+}
+
+.site-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav li {
+  border-bottom: 1px solid #F3EADA;
+}
+
+.site-nav li:last-child {
+  border-bottom: none;
+}
+
+.site-nav a {
+  display: block;
+  color: #fff;
+  padding: 2em 4em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.site-nav a:hover, .site-nav a:focus {
+  background: #424C55;
+  color: #f9f8f6;
+}
+
+.menu-toggle {
+  padding: 1em;
+  position: absolute;
+  top: .25em;
+  right: 2em;
+  cursor: pointer;
+}
+
+.hamburger, .hamburger::before, .hamburger::after {
+  content: '';
+  display: block;
+  background:#fff;
+  height: 3px;
+  width: 1.75em;
+  border-radius: 4px;
+  transition: all ease-in-out 500ms;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+.open .hamburger {
+  transform: rotate(45deg);
+}
+
+.open .hamburger::before {
+  opacity: 0;
+}
+
+.open .hamburger::after {
+  transform: translateY(-3px) rotate(-90deg);
+}
+
+.logo {
+  float: left;
+  font-size: 12pt;
+  margin: 0;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/*====================================================
+  custom styles
+======================================================*/
+.products{
+  background-color:#E4F4ED;
+  color:#1D8880;
+  padding-bottom:5vh;
+}
+
+.home-container {
+  height: 50vh;
+  text-align: center;
+  background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/mobile-hero.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.home-container p {
+  font-size: 10pt;
+  letter-spacing: 0px;
+  text-transform: lowercase;
+  color: #f9f8f6;
+}
+
+.home-container h2 {
+  font-size: 1rem;
+  margin: 0;
+  padding-top: 33vh;
+  color: #f9f8f6;
+}
+
+.contact, .features{
+  padding: 0PX 25px 10px 25px;
+  background-color:#44AC91;
+  color: #EEFCFA;
+}
+
+.contact{
+  padding-bottom: 8vh;
+}
+
+.contact a{
+    color: #EEFCFA;
+}
+
+.advantage-box{
+  padding-bottom: 7vh;
+}
+
+.circle {
+
+  width: 150px;
+  height: 150px;
+
+}
+
+.firstcircle {
+  background: url(../img/battery.jpeg)no-repeat;
+  background-size: cover;
+}
+
+.secondcircle {
+  background: url(../img/weather.jpg);
+  background-size: cover;
+}
+
+.thirdcircle {
+  background: url(../img/tools.jpeg)no-repeat;
+  background-size: cover;
+}
+/*product*/
+.section-title {
+  text-align: center;
+
+  padding: 5vh 0;
+  margin:0;
+}
+
+
+
+ .products ul{
+  display: flex;
+  flex-flow: row wrap;
+  padding:0;
+  margin-top:0;
+
+}
+
+.products li {
+ display: flex;
+  flex: 1;
+ flex-flow: column nowrap;
+ margin: 10px;
+ text-align: center;
+}
+
+.price{
+
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: auto;
+}
+.product-box{
+  align-self:center;
+  height:50vh;
+  width:50vh;
+}
+.heart{
+  background: url(../img/heart_product_image.jpg);
+  background-size: contain;
+
+
+}
+.heart-led {
+  background: url(../img/Led-heart-product-image.jpg) no-repeat 40%;
+  background-size: cover;
+}
+
+.love {
+  background: url(../img/love.jpg)no-repeat 50%;
+  background-size: cover;
+}
+
+.MrMrs {
+  background: url(../img/MrandMrs.jpg)no-repeat 20%;
+  background-size: cover;
+}
+
+.ido{
+  background: url(../img/IMG_6070.jpg)no-repeat;
+  background-size: cover;
+}
+
+.combo{
+  background: url(../img/custom.jpg)no-repeat 93%;
+  background-size: cover;
+}
+
+footer{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1D8880;
+  color: #F3EADA;
+  height:100%;
+  padding: 2vh 5vh;
+}
+footer ul{
+  list-style: none;
+}
+footer li{
+  padding:2px;
+}
+.fa-2x{
+  padding: 10px;
+
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* =================================
+  Media Queries
+==================================== */
+
+@media (min-width: 768px) {
+  .contact, .features, {
+    padding:0;
+  }
+  /* tablet nav*/
+  .menu-toggle {
+    display: none;
+  }
+  .site-nav {
+    position: relative;
+    height: auto;
+    background: transparent;
+    float: right;
+    right: 5%;
+  }
+  .site-nav li {
+    display: inline-block;
+    border: none;
+  }
+  .site-nav a {
+    padding: 0;
+    margin-left: 1em;
+    display: block;
+  }
+  .site-nav a:hover, .site-nav a:focus {
+    background: transparent;
+  }
+/*Home page*/
+  .home-container {
+    padding-top: 50vh;
+  }
+  .home-container h2 {
+    padding-top: 20vh;
+}
+  /*advantages*/
+  .advantage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  .advantage p {
+    text-align: center;
+    padding: 5px;
+    margin: 0px;
+  }
+  .advant1, .advant2, .advant3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+     flex-basis: 30%;
+  }
+  /*products*/
+.proudcts li {
+ flex-basis: 33%;
+}
+
+}
+
+@media (min-width: 1440px){
+
+  .logo{
+    font-size:1.5rem;
+  }
+
+  .home-container h2{
+    padding-top: 25vh;
+    font-size: 4rem;
+  }
+  .home-container p{
+    font-size: 1.8rem;
+  }
+  .product-flex{
+    padding: 2.5vh;
+    justify-content: space-around;
+  }
+  .product-box{
+    margin-top: 3vh;
+  }
+  .section-title{
+    font-size:3em;
+  }
+
+  .advantage-box p{
+    width:60%;
+  }
+ a{
+   font-size: 1.4em;
+ }
+h2{
+  font-size: 2.5rem;
+}
+  h3{
+    font-size: 2rem;
+  }
+  p{
+    font-size: 1.5rem;
+  }
+  .circle {
+    width: 300px;
+    height: 300px;
+  }
+
+
+}
